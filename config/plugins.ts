@@ -4,9 +4,13 @@
 
 import { Plugin } from "vite";
 import configEslint from "./eslint";
+import configStylelint from "./stylelint";
 
 export default function createVitePlugins(command: string, mode: string) {
-  const vitePlugins: (Plugin | Plugin[])[] = [configEslint()];
+  const vitePlugins: (Plugin | Plugin[])[] = [
+    configEslint(),
+    configStylelint()
+  ];
 
   return vitePlugins;
 }
