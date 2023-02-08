@@ -19,8 +19,7 @@ export default defineConfig((configEnv) => {
     resolve: {
       // 别名配置
       alias: {
-        "@": path.join(__dirname, "./src"),
-        "@assets": path.join(__dirname, "./src/assets")
+        "@": path.join(__dirname, "src")
       }
     },
     css: cssOption,

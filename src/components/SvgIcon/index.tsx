@@ -4,11 +4,7 @@ export interface SvgIconProps {
   [key: string]: string;
 }
 
-export default function SvgIcon({
-  iconName,
-  color = "#333",
-  ...props
-}: SvgIconProps) {
+const SvgIcon = ({ iconName, color = "#333", ...props }: SvgIconProps) => {
   const symbolId = `#${"icon"}-${iconName}`;
 
   return (
@@ -16,4 +12,5 @@ export default function SvgIcon({
       <use href={symbolId} fill={color} />
     </svg>
   );
-}
+};
+export default SvgIcon;
