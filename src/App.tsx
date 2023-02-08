@@ -6,7 +6,8 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <div>12</div>
+      <h1 border="2 rounded blue-200">12</h1>
+      <div className="flex-c">center</div>
     </div>
   );
 }
