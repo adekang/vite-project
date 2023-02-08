@@ -5,11 +5,13 @@
 import { Plugin } from "vite";
 import configEslint from "./eslint";
 import configStylelint from "./stylelint";
+import svgr from "vite-plugin-svgr";
 
 export default function createVitePlugins(command: string, mode: string) {
   const vitePlugins: (Plugin | Plugin[])[] = [
     configEslint(),
-    configStylelint()
+    configStylelint(),
+    svgr()
   ];
 
   return vitePlugins;
