@@ -9,13 +9,26 @@
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
     "lint": "npm run lint:script && npm run lint:style",
+    "prepare": "husky install",
     "format": "prettier ./src --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts}": [
+      "npm run lint:script",
+      "git add ."
+    ],
+    "**/*.{scss}": [
+      "npm run lint:style",
+      "git add ."
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "@types/node": "^18.13.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
@@ -23,11 +36,14 @@
     "@typescript-eslint/parser": "^5.51.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
+    "commitlint": "^17.4.2",
     "cssnano": "^5.1.14",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
     "prettier": "^2.8.4",
     "sass": "^1.58.0",
     "stylelint": "^14.16.1",
