@@ -2,11 +2,12 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./",
+    "format": "prettier ./src --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" "
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -22,11 +23,14 @@
     "autoprefixer": "^10.4.13",
     "cssnano": "^5.1.14",
     "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "^2.8.4",
     "sass": "^1.58.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-windicss": "^1.8.10",
     "windicss": "^3.5.6"
   }

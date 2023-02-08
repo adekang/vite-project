@@ -13,16 +13,16 @@ const cssOption: CSSOptions = {
   modules: {
     generateScopedName: "[name]_[local]_[hash:base64:5]",
     hashPrefix: "prefix",
-    localsConvention: "camelCase",
+    localsConvention: "camelCase"
   },
   preprocessorOptions: {
     less: {
-      javascriptEnabled: true,
+      javascriptEnabled: true
     },
     scss: {
       charset: false,
-      additionalData: `@import "${variablePath}";`,
-    },
-  },
+      additionalData: `@import "${variablePath}";`
+    }
+  }
 };
 export default cssOption;

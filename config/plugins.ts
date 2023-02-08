@@ -3,9 +3,10 @@
  */
 
 import { Plugin } from "vite";
+import configEslint from "./eslint";
 
 export default function createVitePlugins(command: string, mode: string) {
-  const vitePlugins: (Plugin | Plugin[])[] = [];
+  const vitePlugins: (Plugin | Plugin[])[] = [configEslint()];
 
   return vitePlugins;
 }

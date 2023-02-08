@@ -1,0 +1,14 @@
+.DS_Store
+**/dist/**
+**/node_modules/**
+coverage
+src/__tests__
+__tests__
+dist-ssr
+*.local
+node_modules/*
+mock
+package.json
+*.d.ts
+.eslintrc.cjs
+tsconfig.json
