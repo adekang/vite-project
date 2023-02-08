@@ -12,10 +12,10 @@ export default defineConfig((configEnv) => {
   console.log("config::", configEnv);
   const { command, mode } = configEnv;
 
-  // const isProduction = mode === "production";
+  const isDev = mode === "development";
 
   return {
-    base: isProduction ? VITE_APP_BASE : "./",
+    base: isDev ? "./" : VITE_APP_BASE,
     resolve: {
       // 别名配置
       alias: {
