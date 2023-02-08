@@ -6,12 +6,14 @@ import { Plugin } from "vite";
 import configEslint from "./eslint";
 import configStylelint from "./stylelint";
 import svgr from "vite-plugin-svgr";
+import configSvgSprites from "./svgSprites";
 
 export default function createVitePlugins(command: string, mode: string) {
   const vitePlugins: (Plugin | Plugin[])[] = [
     configEslint(),
     configStylelint(),
-    svgr()
+    svgr(),
+    configSvgSprites()
   ];
 
   return vitePlugins;

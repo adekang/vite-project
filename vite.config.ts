@@ -5,6 +5,7 @@ import cssOption from "./config/style";
 import createVitePlugins from "./config/plugins";
 import path from "path";
 import { isProduction, VITE_APP_BASE } from "./config/config";
+import build from "./config/build";
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => {
@@ -26,6 +27,7 @@ export default defineConfig((configEnv) => {
     json: {
       stringify: true
     },
-    plugins: [react(), windi(), createVitePlugins(command, mode)]
+    plugins: [react(), windi(), createVitePlugins(command, mode)],
+    build
   };
 });
