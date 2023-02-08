@@ -19,6 +19,9 @@ export default defineConfig((configEnv) => {
       }
     },
     css: cssOption,
+    json: {
+      stringify: true
+    },
     plugins: [react(), windi(), createVitePlugins(command, mode)]
   };
 });
