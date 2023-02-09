@@ -6,7 +6,7 @@ export interface SvgIconProps {
   iconName: string;
   className?: string;
   style?: CSSProperties;
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler<SVGSVGElement>;
 }
 
 const SvgIcon = ({ iconName, style, className, onClick }: SvgIconProps) => {
