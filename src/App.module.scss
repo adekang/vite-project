@@ -2,3 +2,13 @@
   color: $theme-color;
   text-decoration: dashed;
 }
+
+p {
+  font-size: 32px;
+  color: black;
+
+  .icon_font {
+    width: 200px;
+    height: 200px;
+  }
+}
